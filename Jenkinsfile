@@ -1,14 +1,14 @@
 pipeline{
     agent any
     stages{
-        stage('1-checkRunningProcess'){
+        stage('1-processesCheck'){
             steps{
                 sh 'ps -ef'
             }
         }
-        stage('2-checkJenkinsStatus'){
+        stage('2-JenkinsStatusCheck'){
             steps{
-                sh 'sudo systemctl status Jenkins'
+                sh 'sudo systemctl status Jenkins /var/lib/jenkins/jobs/N-STAGE PROJECT'
             }
         }
     }
