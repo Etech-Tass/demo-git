@@ -41,10 +41,6 @@ pipeline{
 				sh 'echo "Engr. Gregory"'
 			}
 		}
-		stage('9-addReadMefile'){
-			steps{
-				sh 'echo "ReadMe file"'
-			}
-		}
+		
 	}
 }
