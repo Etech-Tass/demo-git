@@ -8,7 +8,7 @@ pipeline{
         }
         stage('2-JenkinsStatusCheck'){
             steps{
-                sh 'sudo systemctl status Jenkins /var/lib/jenkins/jobs/N-STAGE PROJECT'
+                sh 'sudo systemctl status jenkins /var/lib/jenkins/jobs/N-STAGE PROJECT'
             }
         }
     }
