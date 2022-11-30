@@ -3,7 +3,7 @@ pipeline{
 	stages{
 		stage('1-groupMember1'){
 			steps{
-				sh 'echo "Engr. Adekunle"'
+				sh 'echo "Engr. Kunle"'
 			}
 		}
 		stage('2-groupMember2'){
@@ -40,10 +40,11 @@ pipeline{
 			steps{
 				sh 'echo "Engr. Gregory"'
 			}
-		}stage('9-adding a file'){
-            steps{
-                sh 'echo "ReadMe file"'
-            }
-        }
+		}
+		stage('9-addReadMefile'){
+			steps{
+				sh 'echo "ReadMe file"'
+			}
+		}
 	}
 }
