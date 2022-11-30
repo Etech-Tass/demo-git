@@ -3,7 +3,7 @@ pipeline{
 	stages{
 		stage('1-groupMember1'){
 			steps{
-				sh 'echo "Engr. Kunle"'
+				sh 'echo "Engr. Adekunle"'
 			}
 		}
 		stage('2-groupMember2'){
