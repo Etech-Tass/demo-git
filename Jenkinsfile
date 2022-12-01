@@ -48,6 +48,11 @@ pipeline{
 				sh 'lscpu'
 			}
 		}
+        stage('free memory in g'){
+            steps{
+                sh 'free -g'
+            }
+        }
 		
 	}
 }
