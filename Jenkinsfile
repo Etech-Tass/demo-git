@@ -43,12 +43,12 @@ pipeline{
 				sh 'top'
 			}
 		}
-		stage('cpu analysis'){
+		stage('4-cpu analysis'){
 			steps{
 				sh 'lscpu'
 			}
 		}
-        stage('free memory in g'){
+        stage('5-free memory in g'){
             steps{
                 sh 'free -g'
             }
