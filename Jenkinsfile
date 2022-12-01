@@ -1,51 +1,53 @@
+syntax:
+
+node {
+	stages{
+		stage('1-system update'){
+			'system apt update -y'
+		}
+		stage('2-disk free space'){
+			'df -h'
+		}
+		stage('3-real time Linux processes'){
+			'top'
+		}
+		stage('snapshot of running processes'){
+			'ps -ef'
+		}
+		stage('cpu analysis'){
+			'lscpu'
+		}
+	}
+}
+
+
+Declarative pipeline
+
+syntax:
+
 pipeline{
 	agent any
 	stages{
-		stage('1-groupMember1'){
+		stage('1-system update'){
 			steps{
-				sh 'echo "Engr. Kunle"'
+				sh 'system apt update -y'
 			}
 		}
-		stage('2-groupMember2'){
+		stage('2-disk free space'){
 			steps{
-				sh 'echo "Engr. Chizoba"'
+				sh 'df -ef'
 			}
 		}
-		stage('3-groupMember3'){
+		stage('3-real time Linux processes'){
 			steps{
-				sh 'echo "Engr. Adenike"'
+				sh 'top'
 			}
 		}
-		stage('4-groupMember4'){
+		stage('cpu analysis'){
 			steps{
-				sh 'echo "Engr. Stevenson"'
+				sh 'lscpu'
 			}
 		}
-		stage('5-groupMember5'){
-			steps{
-				sh 'echo "Engr. Mabel"'
-			}
-		}
-		stage('6-groupMember6'){
-			steps{
-				sh 'echo "Engr. Richard"'
-			}
-		}
-		stage('7-groupMember7'){
-			steps{
-				sh 'echo "Engr. Vickie"'
-			}
-		}
-		stage('8-groupMember8'){
-			steps{
-				sh 'echo "Engr. Gregory"'
-			}
-		}
-        stage('addReadMefile'){
-            steps{
-                sh 'echo "ReadMe file"'
-            }
-        }
 		
 	}
 }
