@@ -21,39 +21,24 @@ node {
 }
 
 
-Declarative pipeline
 
-syntax:
-
-pipeline{
-	agent any
+node {
 	stages{
 		stage('1-system update'){
-			steps{
-				sh 'system apt update -y'
-			}
+			'system apt update -y'
 		}
 		stage('2-disk free space'){
-			steps{
-				sh 'df -ef'
-			}
+			'df -h'
 		}
 		stage('3-real time Linux processes'){
-			steps{
-				sh 'top'
-			}
+			'top'
 		}
-		stage('4-cpu analysis'){
-			steps{
-				sh 'lscpu'
-			}
+		stage('snapshot of running processes'){
+			'ps -ef'
 		}
-        stage('5-free memory in g'){
-            steps{
-                sh 'free -g'
-            }
-        }
-		
+		stage('cpu analysis'){
+			'lscpu'
+		}
 	}
 }
 
